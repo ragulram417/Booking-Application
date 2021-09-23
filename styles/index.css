@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;700&display=swap');
+
+:root{
+  --black : #242333;
+  --white : #FFFF;
+}
+
+* , *::after , *::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body{
+  font-family: 'Gluten', cursive, Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-container{
+  margin-bottom: 1rem;
+
+}
+
+.movie-container select{
+  border: 0;
+  background-color: var(--black);
+  margin-left: 10px;
+  padding: 5px 10px;
+  appearance: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 14px;
+  width: 100px; 
+  
+}
+
+.occupancy{
+ background-color: rgb(0, 0, 0,0.3);
+ align-items: center; 
+ width: 480px; 
+ list-style: none;
+ display: flex;
+ justify-content: space-around;
+ padding: 5px 10px;
+}
+
+.occupancy li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.occupancy li small{
+  margin-left: 2px;
+}
+
+.seat-container{
+  perspective: 1000px;
+}
+.screen{
+  background-color: blue;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  box-shadow: 0px 5px 20px var(--black);
+  
+}
+
+
+
+
+.seat{
+  background-color: var(--black);
+  margin: 5px;
+  height: 13px;
+  width: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat-container{
+  margin: 1rem ;
+}
+
+.row{
+display: flex;
+
+}
+
+.seat.selected{
+  background-color:#6ff691;
+}
+
+.seat.occupied{
+  background-color: rgb(153, 10, 37);
+}
+
+.seat:nth-of-type(2){
+  margin-right: 1rem;
+}
+
+.seat:nth-last-of-type(3){
+  margin-right: 1rem;
+}
+
+.seat:not(.occupied):hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.occupancy .seat:not(.occupied):hover{
+  cursor: none;
+  transform: scale(1);
+}
+
+.text{
+  margin: 5px 0;
+}
+
+.text span{
+  color: #56e68d;
+}
